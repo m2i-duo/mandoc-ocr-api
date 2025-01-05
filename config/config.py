@@ -3,7 +3,7 @@ from enum import Enum
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_PATH = os.path.join(ROOT_DIR, '..')
-
+TEMP_PATH = os.path.join(os.path.dirname(ROOT_DIR), 'samples', 'temp')
 
 class OperationType(Enum):
     Training = 1
@@ -53,7 +53,7 @@ fnResult = os.path.join(OUTPUT_PATH, 'result.txt')
 
 # place whatever word image file you want to test/infer
 fnInfer_1 = os.path.join(INDIVIDUAL_TEST_IMAGE_PATH, "21.png")
-fnInfer_2 = os.path.join(INDIVIDUAL_TEST_IMAGE_PATH, "22.png")
+fnInfer_2 = os.path.join(INDIVIDUAL_TEST_IMAGE_PATH, "23.png")
 
 fnCorpus = os.path.join(OUTPUT_PATH, 'corpus.txt')
 fnWordCharList = os.path.join(OUTPUT_PATH, 'wordCharList.txt')
