@@ -38,7 +38,7 @@ async def recognize_arabic_text(image: UploadFile = File(...)):
         # Read file contents
         image_contents = await image.read()
         # Recognize Arabic text from the image
-        results = service.recognize_text(image_contents)
+        results = service.recognize_text(image_contents, type='merged')
         merged_text = " ".join([result["label"] for result in results if "label" in result])
         return {"text": merged_text}
 

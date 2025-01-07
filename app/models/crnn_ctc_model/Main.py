@@ -7,7 +7,7 @@ import time
 import cv2
 import editdistance
 from app.utils.data_generator_binary import DataGenerator, Batch
-from Model import Model
+from app.models.crnn_ctc_model.Model import Model
 from app.utils.sample_preprocessing import preprocess
 from config import config
 
