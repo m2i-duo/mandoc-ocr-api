@@ -27,4 +27,4 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         push: true
-        tags: ghcr.io/m2i-duo/${{ github.repository }}:latest
+        tags: ghcr.io/${{ github.repository }}:latest

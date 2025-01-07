@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     libxrender1 \
     g++ \
     make \
+    tesseract-ocr \
     libxext6 \
     && rm -rf /var/lib/apt/lists/*
 
