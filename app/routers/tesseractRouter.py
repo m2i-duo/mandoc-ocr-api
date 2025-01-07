@@ -13,9 +13,6 @@ async def recognize_arabic_text(image: UploadFile = File(...)):
     """
     try:
         # Check file type
-        if image.content_type not in ["image/png", "image/jpeg", "image/jpg"]:
-            raise HTTPException(status_code=400, detail="Invalid file type. Only PNG or JPEG files are supported.")
-
         # Read file contents
         image_contents = await image.read()
         # Recognize Arabic text from the image
@@ -31,10 +28,6 @@ async def recognize_arabic_text(image: UploadFile = File(...)):
     Endpoint to process an uploaded image and recognize Arabic text.
     """
     try:
-        # Check file type
-        if image.content_type not in ["image/png", "image/jpeg", "image/jpg"]:
-            raise HTTPException(status_code=400, detail="Invalid file type. Only PNG or JPEG files are supported.")
-
         # Read file contents
         image_contents = await image.read()
         # Recognize Arabic text from the image
