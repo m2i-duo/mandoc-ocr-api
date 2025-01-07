@@ -25,7 +25,8 @@ class ArabicTextRecognitionService:
         cleaned = ' '.join(cleaned.split())  # Normalize multiple spaces to a single space
         return cleaned
 
-    def recognize_text(self, file_contents):
+
+    def recognize_text(self, file_contents, type='chunks'):
         """
         Recognizes Arabic text from an image and returns a list of words with their corresponding images in base64 format.
         """
@@ -35,7 +36,10 @@ class ArabicTextRecognitionService:
             img = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)  # Use grayscale directly
 
             # Segment the image into individual words
-            word_images = self.segment_image(img)
+            if(type == 'chunks'):
+                word_images = self.segment_image(img)
+            else:
+                word_images = [img]
 
             results = []
             for i, word_img in enumerate(word_images):
